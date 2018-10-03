@@ -1,0 +1,20 @@
+.list-group-item:hover{
+			color: #337ab7;
+			text-shadow:  0 0 1em #337ab7;
+			cursor: pointer;
+		}
+		body {
+    background-color: powderblue;
+    }
+    input[type=text] {
+    vertical-align:middle;
+   
+    margin: 8px 0;
+    box-sizing: border-box;
+   }
+   label{
+display:inline-block;
+width:200px;
+margin-right:30px;
+text-align:right;
+}

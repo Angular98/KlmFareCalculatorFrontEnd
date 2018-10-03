@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html  ng-app="travelApp">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js"></script>
+<script src="originanddestination.js"></script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div>
+		<div  ng-controller="travelCtrl">
+			<h3 align="center">KLM Fare Calculator</h3>
+			<label>Enter Origin</label><input type="text" name="origin" id="origin" ng-model="origin" placeholder="Search.." ng-keyup="selectorigin(origin)" class="form-control"/>
+			<ul class="list-group">
+				<li class="list-group-item" ng-repeat="origincountrydata in filterOrigin" ng-click="fillTextboxForOrigin(origincountrydata)">{{origincountrydata}}</li>
+			</ul>
+			<label>Enter Destination</label><input type="text" name="origin" id="destination" ng-model="destination" placeholder="Search.." ng-keyup="selectdestination(destination)" class="form-control" />
+			<ul class="list-group">
+				<li class="list-group-item" ng-repeat="destinationcountrydata in filterDestination" ng-click="fillTextboxForDestination(destinationcountrydata)">{{destinationcountrydata}}</li>
+			</ul>
+		
+			<div align="center"><input type="button" value="Calculate Fare" ng-Click="CalculateFare()"/></div>
+			<label>The fare for the given origin and destination is: {{fare}}</label>
+		</div>
+	</div>
+</body>
+</html>
